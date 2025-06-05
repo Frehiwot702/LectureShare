@@ -12,7 +12,7 @@ const Lecture = async () => {
             <h3 className='text-5xl font-bold flex items-end pt-24'>Lecture Materials on <span className='text-amber-600'> - Health Science</span></h3>
         </div>
 
-        <div className='w-full flex py-16'>
+        <div className='w-full py-16'>
             <div className='flex justify-between'>
                 <h3 className='text-4xl font-bold'>Explore Lectures</h3>
                 <input 

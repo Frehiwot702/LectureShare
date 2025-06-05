@@ -216,15 +216,15 @@ export const tags = [
         name: 'fitness',
     },
     {
-        id: 2,
+        id: 5,
         name: 'anatomy',
     },
     {
-        id: 3,
+        id: 6,
         name: 'skeleton',
     },
     {
-        id: 4,
+        id: 7,
         name: 'fitness',
     }  
 ]
