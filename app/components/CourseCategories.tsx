@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { courses, fields } from '@/models/database'
 import Link from 'next/link'
 
 const CourseCategories = () => {
+
+    useEffect({
+        const 
+    }, [])
+
+
   return (
     <div className='w-full py-10'>
         

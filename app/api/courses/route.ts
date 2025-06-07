@@ -3,22 +3,16 @@ import connectDb from "@/lib/db";
 import Course, {ICourse} from "@/models/Course";
 
 // GET /api/courses
-export async function GET(req: NextRequest, res: NextResponse) {
-  
+export async function GET(request: NextRequest) {
   try {
     await connectDb();
-        console.log('connection: ' , connectDb);
-    const courses: iCourse[] = await Course.find({});
-        console.log('connection from route, ', courses)
-    
-        const formattedData = courses.map(course => ({
-            _id: course._id.toString(),
-            name: course.name,
-        }))
-    res.status(200).json(formattedData)
+      
+    const courses: ICourse[] = await Course.find({});
+    return NextResponse.json({courses})
+   
   } catch (error) {
     console.error('Failed to fetch courses:', error);
-    res.status(500).json({ message: "Failed to fetch courses" });
+    return NextResponse.json({ message: "Failed to fetch courses" }, {status: 500 });
   }
 }
 
@@ -26,10 +20,10 @@ export async function GET(req: NextRequest, res: NextResponse) {
 // TypeScript needs to know the type of request.
 export async function POST(request: NextRequest) {
   try {
-      const {name, description, level, school}  = await request.json();
+      const {name, description, level, courseDepartment, school}  = await request.json();
 
       await connectDb();
-      await Course.create({name, description, level, school})
+      await Course.create({name, description, level, courseDepartment, school})
 
       return NextResponse.json({message: "Course Created!"}, {status: 201})
   } catch(error) {
