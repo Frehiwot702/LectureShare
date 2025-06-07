@@ -17,8 +17,8 @@ export interface ICourse extends Document {
 }
 
 const CourseSchema: Schema = new Schema({
-    name: {type: String, required: true},
-    description: {type: String, required: true},
+    name: { type: String, required: true},
+    description: { type: String, required: true},
     level: { type: Number, required: true, enum: Object.values(CourseLevel).filter(val => typeof val === 'number')},
     school: { type: Schema.Types.ObjectId, ref: 'School', required: true },
 })
