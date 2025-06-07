@@ -1,5 +1,5 @@
 import React from 'react'
-import { universities } from '@/model/database'
+import { universities } from '@/models/database'
 
 const UniversityCategories = () => {
 

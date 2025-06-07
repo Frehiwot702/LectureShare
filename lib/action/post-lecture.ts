@@ -1,7 +1,7 @@
 'use server'
 import connectDb from "../db"
 import {z} from 'zod'
-import Lecture from "@/model/Lecture"
+import Lecture from "@/models/Lecture"
 import { revalidatePath } from 'next/cache'
 import { redirect } from "next/navigation"
 

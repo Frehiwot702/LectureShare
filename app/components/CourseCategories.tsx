@@ -1,5 +1,5 @@
 import React from 'react'
-import { courses, fields } from '@/model/database'
+import { courses, fields } from '@/models/database'
 import Link from 'next/link'
 
 const CourseCategories = () => {

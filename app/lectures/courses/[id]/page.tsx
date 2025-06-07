@@ -2,7 +2,7 @@
 import CourseCategories from '@/app/components/CourseCategories'
 import UniversityCategories from '@/app/components/UniversityCategories'
 import React, { useEffect, useState } from 'react'
-import { tags } from '@/model/database'
+import { tags } from '@/models/database'
 import { ObjectId } from 'mongoose'
 import connectDb from "@/lib/db";
 

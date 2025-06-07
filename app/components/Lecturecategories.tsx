@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { fields } from '@/model/database'
+import { fields } from '@/models/database'
 
 const Lecturecategories = () => {
 

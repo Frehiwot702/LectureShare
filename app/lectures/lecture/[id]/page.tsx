@@ -1,5 +1,5 @@
 import React from 'react'
-import { fields } from '@/model/database'
+import { fields } from '@/models/database'
 import UniversityCategories from '@/app/components/UniversityCategories'
 import Lecturecategories from '@/app/components/Lecturecategories'
 import CourseCategories from '@/app/components/CourseCategories'

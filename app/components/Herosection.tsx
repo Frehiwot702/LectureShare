@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Herosection = () => {
@@ -13,8 +14,8 @@ const Herosection = () => {
 
         </div>
         <div className='space-y-10 grid p-10'>
-            <img src='./image02.jpg' className='w-2/3'/>
-            <img src='./image01.jpg'  className='w-1/2'  />
+            <Image src='./image02.jpg' alt='lecture' className='w-2/3'/>
+            <Image src='./image01.jpg' alt='lecture'  className='w-1/2'  />
         </div>
     </div>
   )
