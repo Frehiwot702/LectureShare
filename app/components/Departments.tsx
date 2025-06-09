@@ -40,8 +40,8 @@ const Departments = () => {
             {
                 dept.map((fieldItem) => (
                     // items id must be on the top-level React element returned by .map()
-                    <div key={fieldItem.id} className='border border-white px-10 py-5 rounded-lg bg-white/30 hover:bg-gray-200'>
-                        <Link  href={`lectures/lecture/${fieldItem._id}`} className='font-bold text-xl hover:text-amber-600'>{fieldItem.name}</Link>
+                    <div key={fieldItem._id} className='border border-white px-10 py-5 rounded-lg bg-white/30 hover:bg-gray-200'>
+                        <Link  href={{pathname:`lectures/lecture/${fieldItem._id}`}} className='font-bold text-xl hover:text-amber-600'>{fieldItem.name}</Link>
                         <p>{fieldItem.description}</p>
                     </div>
                 ))

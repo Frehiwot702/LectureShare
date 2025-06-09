@@ -7,11 +7,10 @@ import mongoose from "mongoose";
 export async function GET(request: NextRequest, { params }: { params: { _id: string } }) {
   try {
     await connectDb();
-      
-    console.log('from dept course route')
+    console.log('param from route: ', params._id)
     const departmentId = new mongoose.Types.ObjectId(params._id);
     console.log('dept id: ', departmentId)
-    const course: ICourse[] = await Course.find({courseDepartment: departmentId});
+    const course: ICourse[] = await Course.find({courseDepartment: params._id});
     return NextResponse.json(course)
    
   } catch (error) {

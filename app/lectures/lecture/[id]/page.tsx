@@ -5,7 +5,7 @@ import CourseCategories from '@/app/components/CourseCategories'
 import { ICourse } from '@/models/Course'
 
 
-const Lecture = async ({params} : {
+const Lecture =  ({params} : {
     params: {
         _id: string
     }
@@ -29,7 +29,7 @@ const Lecture = async ({params} : {
                     placeholder='Search'
                     className='border border-gray-400 rounded-full px-5 py-2 w-3/8'/>
             </div>
-            <CourseCategories departmentId ={_id} />
+            <CourseCategories departmentId = {_id} />
         </div>
         
     </div>
