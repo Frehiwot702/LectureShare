@@ -43,7 +43,7 @@ const page = () => {
                         <span key={tag.id} className='border border-gray-300 rounded-full px-5 py-2 hover:bg-amber-600 hover:text-white'> {tag.name}</span>
                     ))}
                 </div>
-                <CourseCategories/>
+                <CourseCategories />
             </div>
         </div>
     </div>

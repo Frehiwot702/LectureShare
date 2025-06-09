@@ -7,12 +7,12 @@ import { ICourse } from '@/models/Course'
 
 const Lecture =  ({params} : {
     params: {
-        _id: string
+        id: string
     }
 }) => {
 
-  const {_id} = params;
-  console.log('from page, ', params)
+  const {id} = params;
+  console.log('from page, ', params.id)
    
 
   return (
@@ -29,7 +29,7 @@ const Lecture =  ({params} : {
                     placeholder='Search'
                     className='border border-gray-400 rounded-full px-5 py-2 w-3/8'/>
             </div>
-            <CourseCategories departmentId = {_id} />
+            <CourseCategories departmentId = {params.id} />
         </div>
         
     </div>
