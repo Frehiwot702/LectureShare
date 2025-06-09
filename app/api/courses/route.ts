@@ -7,8 +7,8 @@ export async function GET(request: NextRequest) {
   try {
     await connectDb();
       
-    const courses: ICourse[] = await Course.find({});
-    return NextResponse.json({courses})
+    const courses: ICourse[] = await Course.find();
+    return NextResponse.json(courses)
    
   } catch (error) {
     console.error('Failed to fetch courses:', error);

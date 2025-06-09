@@ -1,10 +1,19 @@
-import React from 'react'
 import { fields } from '@/models/database'
 import UniversityCategories from '@/app/components/UniversityCategories'
-import Lecturecategories from '@/app/components/Lecturecategories'
+import Lecturecategories from '@/app/components/Departments'
 import CourseCategories from '@/app/components/CourseCategories'
+import { ICourse } from '@/models/Course'
 
-const Lecture = async () => {
+
+const Lecture = async ({params} : {
+    params: {
+        _id: string
+    }
+}) => {
+
+  const {_id} = params;
+  console.log('from page, ', params)
+   
 
   return (
     <div className='relative'>
@@ -20,7 +29,7 @@ const Lecture = async () => {
                     placeholder='Search'
                     className='border border-gray-400 rounded-full px-5 py-2 w-3/8'/>
             </div>
-            <CourseCategories/>
+            <CourseCategories departmentId ={_id} />
         </div>
         
     </div>
