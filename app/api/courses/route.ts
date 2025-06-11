@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import connectDb from "@/lib/db";
 import Course, {ICourse} from "@/models/Course";
+import { z } from 'zod';
 
 // GET /api/courses
 export async function GET(request: NextRequest) {
@@ -20,10 +21,11 @@ export async function GET(request: NextRequest) {
 // TypeScript needs to know the type of request.
 export async function POST(request: NextRequest) {
   try {
-      const {name, description, level, courseDepartment, school}  = await request.json();
+      const body  = await request.json();
+      console.log('from course route: ', body)
 
       await connectDb();
-      await Course.create({name, description, level, courseDepartment, school})
+      await Course.create(body)
 
       return NextResponse.json({message: "Course Created!"}, {status: 201})
   } catch(error) {
